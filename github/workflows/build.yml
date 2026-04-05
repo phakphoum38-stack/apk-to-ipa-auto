@@ -1,36 +1,38 @@
 name: Build IPA
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v4
 
-      - name: Install tools
-        run: |
-          brew install apktool
+    - name: Show files
+      run: ls -R
 
-      - name: Extract APK
-        run: |
-          chmod +x scripts/extract.sh
-          ./scripts/extract.sh
+    - name: Build IPA
+      run: |
+        cd ios
+        xcodebuild \
+        -scheme App \
+        -sdk iphoneos \
+        -configuration Release \
+        archive -archivePath build/App.xcarchive
 
-      - name: Create iOS App
-        run: |
-          chmod +x scripts/create_ios.sh
-          ./scripts/create_ios.sh
+        xcodebuild \
+        -exportArchive \
+        -archivePath build/App.xcarchive \
+        -exportOptionsPlist ../exportOptions.plist \
+        -exportPath build
 
-      - name: Build IPA
-        run: |
-          chmod +x scripts/build.sh
-          ./scripts/build.sh
-
-      - name: Upload IPA
-        uses: actions/upload-artifact@v3
-        with:
-          name: ipa
-          path: build/*.ipa
+    - name: Upload IPA
+      uses: actions/upload-artifact@v4
+      with:
+        name: ipa-file
+        path: ios/build/*.ipa
