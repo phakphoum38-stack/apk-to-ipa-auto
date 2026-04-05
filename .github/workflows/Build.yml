@@ -1,0 +1,22 @@
+name: Build IPA
+
+on: [push]
+
+jobs:
+ build:
+  runs-on: macos-latest
+
+  steps:
+  - uses: actions/checkout@v4
+
+  - name: Build
+    run: |
+      cd ios
+
+      xcodebuild \
+      -project App.xcodeproj \
+      -scheme App \
+      -sdk iphoneos \
+      -configuration Release \
+      archive \
+      -archivePath build/App.xcarchive
