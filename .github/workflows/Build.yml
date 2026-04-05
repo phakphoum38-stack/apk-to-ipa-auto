@@ -1,0 +1,44 @@
+name: Build IPA
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Show files
+      run: ls -R
+
+    - name: Build App
+      run: |
+        cd ios
+
+        xcodebuild \
+        -project App.xcodeproj \
+        -scheme App \
+        -sdk iphoneos \
+        -configuration Release \
+        archive \
+        -archivePath build/App.xcarchive
+
+    - name: Export IPA
+      run: |
+        cd ios
+
+        xcodebuild \
+        -exportArchive \
+        -archivePath build/App.xcarchive \
+        -exportOptionsPlist ../exportOptions.plist \
+        -exportPath build
+
+    - name: Upload IPA
+      uses: actions/upload-artifact@v4
+      with:
+        name: ipa
+        path: ios/build/*.ipa
