@@ -16,20 +16,18 @@ jobs:
     - name: Show files
       run: ls -R
 
+    - name: Build continue-on-error:
+    
     - name: Build IPA
       run: |
-        cd ios
-        xcodebuild \
-        -scheme App \
-        -sdk iphoneos \
-        -configuration Release \
-        archive -archivePath build/App.xcarchive
+         cd ios
 
-        xcodebuild \
-        -exportArchive \
-        -archivePath build/App.xcarchive \
-        -exportOptionsPlist ../exportOptions.plist \
-        -exportPath build
+         xcodebuild \
+         -project App.xcodeproj \
+         -scheme App \
+         -sdk iphoneos \
+         -configuration Release \
+          archive -archivePath build/App.xcarchive
 
     - name: Upload IPA
       uses: actions/upload-artifact@v4
