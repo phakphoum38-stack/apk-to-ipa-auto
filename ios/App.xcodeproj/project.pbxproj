@@ -11,7 +11,7 @@
 
 /* Begin PBXFileReference section */
 		1D60588D0D05DD3D006BFB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* APKCombo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APKCombo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -26,9 +26,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058920D05DD3D006BFB54 /* App */ = {
+		1D6058920D05DD3D006BFB54 /* APKCombo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3D006BFB54 /* Build configuration list for PBXNativeTarget "App" */;
+			buildConfigurationList = 1D6058960D05DD3D006BFB54 /* Build configuration list for PBXNativeTarget "APKCombo" */;
 			buildPhases = (
 				1D6058930D05DD3D006BFB54 /* Sources */,
 			);
@@ -36,9 +36,9 @@
 			);
 			dependencies = (
 			);
-			name = App;
-			productName = App;
-			productReference = 1D6058910D05DD3D006BFB54 /* App.app */;
+			name = APKCombo;
+			productName = APKCombo;
+			productReference = 1D6058910D05DD3D006BFB54 /* APKCombo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -50,7 +50,7 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 			};
-			buildConfigurationList = 1D60588A0D05DD3D006BFB54 /* Build configuration list for PBXProject "App" */;
+			buildConfigurationList = 1D60588A0D05DD3D006BFB54 /* Build configuration list for PBXProject "APKCombo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -63,7 +63,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058920D05DD3D006BFB54 /* App */,
+				1D6058920D05DD3D006BFB54 /* APKCombo */,
 			);
 		};
 /* End PBXProject section */
@@ -99,7 +99,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D60588A0D05DD3D006BFB54 /* Build configuration list for PBXProject "App" */ = {
+		1D60588A0D05DD3D006BFB54 /* Build configuration list for PBXProject "APKCombo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3D006BFB54 /* Debug */,
@@ -108,7 +108,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D6058960D05DD3D006BFB54 /* Build configuration list for PBXNativeTarget "App" */ = {
+		1D6058960D05DD3D006BFB54 /* Build configuration list for PBXNativeTarget "APKCombo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3D006BFB54 /* Debug */,
