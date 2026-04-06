@@ -1,0 +1,41 @@
+{
+ archiveVersion = 1;
+ classes = {};
+ objectVersion = 55;
+ objects = {
+
+/* Begin PBXBuildFile section */
+1D6058900D05DD3D006BFB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60588D0D05DD3D006BFB54 /* AppDelegate.swift */; };
+1D6058910D05DD3D006BFB54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60588E0D05DD3D006BFB54 /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+1D60588D0D05DD3D006BFB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+1D60588E0D05DD3D006BFB54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+1D60588F0D05DD3D006BFB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+1D60588C0D05DD3D006BFB54 = {
+ isa = PBXGroup;
+ children = (
+ 1D60588D0D05DD3D006BFB54,
+ 1D60588E0D05DD3D006BFB54,
+ 1D60588F0D05DD3D006BFB54,
+ );
+ sourceTree = "<group>";
+};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+1D6058870D05DD3D006BFB54 /* Project object */ = {
+ isa = PBXProject;
+ compatibilityVersion = "Xcode 14.0";
+ mainGroup = 1D60588C0D05DD3D006BFB54;
+ projectDirPath = "";
+};
+/* End PBXProject section */
+
+ };
+ rootObject = 1D6058870D05DD3D006BFB54;
+}
