@@ -1,19 +1,31 @@
-- name: Build (no signing)
-  run: |
-    xcodebuild -project ios/App.xcodeproj \
-    -scheme App \
-    -configuration Release \
-    -derivedDataPath build \
-    CODE_SIGNING_ALLOWED=NO
+name: Build iOS IPA
 
-- name: Create IPA manually
-  run: |
-    mkdir Payload
-    cp -r build/Build/Products/Release-iphoneos/*.app Payload/
-    zip -r App.ipa Payload
+on:
+  push:
 
-- name: Upload IPA
-  uses: actions/upload-artifact@v4
-  with:
-    name: ipa
-    path: App.ipa
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build (no signing)
+        run: |
+          xcodebuild -project ios/App.xcodeproj \
+          -scheme App \
+          -configuration Release \
+          -derivedDataPath build \
+          CODE_SIGNING_ALLOWED=NO
+
+      - name: Create IPA manually
+        run: |
+          mkdir Payload
+          cp -r build/Build/Products/Release-iphoneos/*.app Payload/
+          zip -r App.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: ipa
+          path: App.ipa
