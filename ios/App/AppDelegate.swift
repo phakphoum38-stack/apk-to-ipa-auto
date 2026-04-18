@@ -1,6 +1,6 @@
 import UIKit
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -11,5 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = ViewController()
-        window?.root
+        window?.backgroundColor = .white
+        window?.makeKeyAndVisible()
+
+        return true
+    }
+}
