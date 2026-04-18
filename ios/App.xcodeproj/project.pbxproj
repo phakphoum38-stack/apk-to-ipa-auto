@@ -6,11 +6,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D6058900D05DD3D006BFB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60588D0D05DD3D006BFB54 /* AppDelegate.swift */; };
+		1D6058900D05DD3D006BFB54 /* App/AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60588D0D05DD3D006BFB54 /* App/AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D60588D0D05DD3D006BFB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D60588D0D05DD3D006BFB54 /* App/AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AppDelegate.swift; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D6058900D05DD3D006BFB54 /* AppDelegate.swift in Sources */,
+				1D6058900D05DD3D006BFB54 /* App/AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
