@@ -26,6 +26,10 @@ jobs:
         run: |
            if [ "$scheme" = "default" ]; then
            scheme=$(cat default)
-           fi [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
+           fi 
+           if [ -z "$scheme" ]; then
+           echo "❌ scheme is empty"
+           exit 1
+           fi.[ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
            file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
            xcodebuild clean build analyze -scheme "$scheme" -"$filetype_parameter" "$file_to_build" | xcpretty && exit ${PIPESTATUS[0]}
