@@ -83,17 +83,23 @@
 		1D6058940D05DD3D006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-			};
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SDKROOT = iphoneos;
+                SWIFT_VERSION = 5.0;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+                INFOPLIST_FILE = Info.plist;
+            };
 			name = Debug;
 		};
 		1D6058950D05DD3D006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-			};
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SDKROOT = iphoneos;
+                SWIFT_VERSION = 5.0;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+                INFOPLIST_FILE = Info.plist;
+            };
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
