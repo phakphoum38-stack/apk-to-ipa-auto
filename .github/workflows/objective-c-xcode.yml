@@ -22,12 +22,15 @@ jobs:
         run: |
           xcodebuild -list -project ios/App.xcodeproj
 
-      - name: Build (no signing)
+      - name: Build
         run: |
           xcodebuild \
-            -project ios/App.xcodeproj \
-            -scheme App \
-            -sdk iphoneos \
-            -configuration Release \
-            CODE_SIGNING_ALLOWED=NO \
-            build
+          -project ios/App.xcodeproj \
+          -scheme App \
+          -sdk iphoneos \
+          -configuration Release \
+          -destination 'generic/platform=iOS' \
+           CODE_SIGNING_ALLOWED=NO \
+           SWIFT_VERSION=5.0 \
+           IPHONEOS_DEPLOYMENT_TARGET=12.0 \
+           build
