@@ -1,0 +1,36 @@
+name: Build Flutter iOS IPA
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 'stable'
+
+      - name: Flutter pub get
+        run: flutter pub get
+
+      - name: Build iOS (no signing)
+        run: |
+          flutter build ios --release --no-codesign
+
+      - name: Create IPA
+        run: |
+          mkdir -p Payload
+          APP_PATH=$(find build/ios/iphoneos -name "*.app" | head -n 1)
+          cp -r "$APP_PATH" Payload/
+          zip -r App.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: ipa
+          path: App.ipa
