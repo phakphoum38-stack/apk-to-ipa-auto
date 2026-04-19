@@ -18,22 +18,22 @@ jobs:
           -derivedDataPath build \
           CODE_SIGNING_ALLOWED=NO
 
-      # 🔥 หา .app ให้เจอจริง (กัน path พัง)
       - name: Locate .app
         run: |
           APP_PATH=$(find build -name "*.app" | head -n 1)
           echo "APP_PATH=$APP_PATH" >> $GITHUB_ENV
           echo "Found app at: $APP_PATH"
 
-      # 🔥 สร้าง IPA แบบถูกโครงสร้าง 100%
+      # 🔥 FIX ตรงนี้
       - name: Create IPA correctly
         run: |
           mkdir -p Payload
           cp -r "$APP_PATH" Payload/
-          cd Payload
-          zip -r ../App.ipa .
-          cd ..
-          ls -lah App.ipa
+          zip -r App.ipa Payload   # ✅ ต้อง zip ทั้ง Payload
+
+      - name: Verify IPA structure
+        run: |
+          unzip -l App.ipa
 
       - name: Upload IPA
         uses: actions/upload-artifact@v4
