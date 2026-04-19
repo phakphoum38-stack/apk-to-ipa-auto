@@ -6,11 +6,9 @@
     <key>CFBundleName</key>
     <string>MyApp</string>
 
-    <!-- 🔥 ชื่อที่โชว์บนหน้าจอ -->
     <key>CFBundleDisplayName</key>
     <string>My App</string>
 
-    <!-- 🔥 เปลี่ยนเป็นของคุณเอง -->
     <key>CFBundleIdentifier</key>
     <string>com.phakphum.myapp1</string>
 
@@ -20,7 +18,9 @@
     <key>CFBundleShortVersionString</key>
     <string>1.0</string>
 
-    <!-- 🔥 แนะนำให้มี -->
+    <key>CFBundleExecutable</key>
+    <string>LApp</string>
+
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen</string>
 
