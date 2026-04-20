@@ -11,7 +11,7 @@
 <string>App</string>
 
 <key>CFBundleIdentifier</key>
-<string>com.example.app</string>
+<string>com.phakphum.fix1</string>
 
 <key>CFBundleName</key>
 <string>APKtoIPA</string>
@@ -24,6 +24,9 @@
 
 <key>UILaunchStoryboardName</key>
 <string></string>
+
+<key>UIMainStoryboardFile</key>
+<string>Main</string>
 
 <key>UIApplicationSceneManifest</key>
 <dict/>
